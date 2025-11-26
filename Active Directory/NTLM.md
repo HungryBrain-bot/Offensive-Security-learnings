@@ -36,6 +36,8 @@ SMB Capture       Capture challenge/response via responder via responder/mitm6
 
 
 ## NTLM in detail
+How NTLMv2 authenticates ?
+1. Client sends Negotiate message which allows the client to specify its supported NTLM options to the server. [Negotiate message](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-nlmp/b34032e5-3aae-4bc6-84c3-c6d80eadf7f2)
 
 
 
