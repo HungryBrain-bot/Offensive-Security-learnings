@@ -38,6 +38,8 @@ SMB Capture       Capture challenge/response via responder via responder/mitm6
 ## NTLM in detail
 How NTLMv2 authenticates ?
 1. Client sends Negotiate message which allows the client to specify its supported NTLM options to the server. [Negotiate message](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-nlmp/b34032e5-3aae-4bc6-84c3-c6d80eadf7f2)
+2. Server after receiving the Negotiate message sends back the server challenge. It is used by the server to challenge the client to prove its identity. [Challenge message](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-nlmp/801a4681-8809-4be9-ab0d-61dcfe762786)
+3. In response to the server’s challenge message, the client creates an NTLMv2 hash by hashing the user’s password using MD4, then combining it with the username and domain. This intermediate hash is then combined with the server challenge and the client challenge to produce the NTLMv2 hash (response), which is sent to the server. [Response](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-nlmp/033d32cc-88f9-4483-9bf2-b273055038ce)
 
 
 
