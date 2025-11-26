@@ -13,7 +13,7 @@ How NTLM Authenticates ?
  3. Client encrypts the challenge using the NTLM hash of the password and returnm the result.
  4. Server verifies using the stored NTLM hash.
 
-** Before going into detailed explaination of NTLM protocol we will look into, type of NTLM hashs, Important NTLM attacks [Click here](#NTLM in detail) ** 
+** Before going into detailed explaination of NTLM protocol we will look into, type of NTLM hashs, Important NTLM attacks [Go to NTLM in detail](#NTLM in detail) ** 
 
 NTLM Hash Types:
 Hash Type         Example                     Purpose
